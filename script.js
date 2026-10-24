@@ -41,9 +41,10 @@ form.addEventListener('submit', (event) => {
   
   document.getElementById('formStatus').textContent = 'Uw e-mailprogramma wordt geopend met de aanvraag. Controleer de gegevens en verzend de e-mail daar.';
   
-  // Het e-mailadres is hier aangepast naar jouw adres
-  const recipient = 'Info@sevenlytranport.nl';
+  // Jouw e-mailadres is hier ingevuld
+  const recipient = 'info@sevenlytransport.nl';
   
-  // De code stuurt de mail nu direct naar jouw ingevulde recipient adres
-  window.location.href = `info@sevenlytransport.nl:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  // De mail wordt nu direct naar jouw adres verzonden via het e-mailprogramma van de bezoeker
+  window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
+
