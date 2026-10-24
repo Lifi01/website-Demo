@@ -40,8 +40,8 @@ form.addEventListener('submit', (event) => {
   const body = fields.map(([label, value]) => `${label}: ${value}`).join('\n');
   document.getElementById('formStatus').textContent = 'Uw e-mailprogramma wordt geopend met de aanvraag. Controleer de gegevens en verzend de e-mail daar.';
   // Replace this placeholder with Sevenly's real business email address before publishing.
-  const recipient = 'VUL-HIER-HET-E-MAILADRES-IN';
-  if (recipient.startsWith('VUL-HIER')) {
+  const recipient = 'info@sevenlytransport.nl';
+  if (recipient.startsWith('info@sevenlytransport.nl')) {
     const mailto = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body + '\n\nLet op: vul het e-mailadres van Sevenly in als ontvanger.')}`;
     window.location.href = mailto;
     document.getElementById('formStatus').textContent = 'De aanvraag is klaargezet in uw e-mailprogramma. Vul het e-mailadres van Sevenly als ontvanger in en verzend de e-mail.';
