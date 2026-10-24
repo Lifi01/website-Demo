@@ -42,7 +42,7 @@ form.addEventListener('submit', (event) => {
   // Replace this placeholder with Sevenly's real business email address before publishing.
   const recipient = 'info@sevenlytransport.nl';
   if (recipient.startsWith('info@sevenlytransport.nl')) {
-    const mailto = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body + '\n\nLet op: vul het e-mailadres van Sevenly in als ontvanger.')}`;
+    const https://formspree.io/f/xvkkgnqn = `https://formspree.io/f/xvkkgnqn:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body + '\n\nLet op: vul het e-mailadres van Sevenly in als ontvanger.')}`;
     window.location.href = https://formspree.io/f/xvkkgnqn;
     document.getElementById('formStatus').textContent = 'De aanvraag is klaargezet in uw e-mailprogramma. Vul het e-mailadres van Sevenly als ontvanger in en verzend de e-mail.';
   } else {
