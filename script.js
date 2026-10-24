@@ -43,9 +43,9 @@ form.addEventListener('submit', (event) => {
   const recipient = 'info@sevenlytransport.nl';
   if (recipient.startsWith('info@sevenlytransport.nl')) {
     const mailto = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body + '\n\nLet op: vul het e-mailadres van Sevenly in als ontvanger.')}`;
-    window.location.href = mailto;
+    window.location.href = https://formspree.io/f/xvkkgnqn;
     document.getElementById('formStatus').textContent = 'De aanvraag is klaargezet in uw e-mailprogramma. Vul het e-mailadres van Sevenly als ontvanger in en verzend de e-mail.';
   } else {
-    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `https://formspree.io/f/xvkkgnqn:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 });
