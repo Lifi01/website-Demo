@@ -45,5 +45,5 @@ form.addEventListener('submit', (event) => {
   const recipient = 'Info@sevenlytranport.nl';
   
   // De code stuurt de mail nu direct naar jouw ingevulde recipient adres
-  window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = `info@sevenlytransport.nl:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
