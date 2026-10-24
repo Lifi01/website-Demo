@@ -42,8 +42,8 @@ form.addEventListener('submit', (event) => {
   // Replace this placeholder with Sevenly's real business email address before publishing.
   const recipient = 'https://formspree.io/f/xvkkgnqn';
   if (recipient.startsWith('https://formspree.io/f/xvkkgnqn')) {
-    const mailto = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body + '\n\nLet op: vul het e-mailadres van Sevenly in als ontvanger.')}`;
-    window.location.href = mailto;
+    const mailto = `https://formspree.io/f/xvkkgnqn:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body + '\n\nLet op: vul het e-mailadres van Sevenly in als ontvanger.')}`;
+    window.location.href = https://formspree.io/f/xvkkgnqn;
     document.getElementById('formStatus').textContent = 'De aanvraag is klaargezet in uw e-mailprogramma. Vul het e-mailadres van Sevenly als ontvanger in en verzend de e-mail.';
   } else {
     window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
