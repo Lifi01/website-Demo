@@ -38,13 +38,16 @@ form.addEventListener('submit', (event) => {
     ['Extra informatie', data.get('details') || 'Geen aanvullende informatie']
   ];
   const body = fields.map(([label, value]) => `${label}: ${value}`).join('\n');
-  
   document.getElementById('formStatus').textContent = 'Uw e-mailprogramma wordt geopend met de aanvraag. Controleer de gegevens en verzend de e-mail daar.';
-  
-  // Jouw e-mailadres is hier ingevuld
-  const recipient = 'info@sevenlytransport.nl';
-  
-  // De mail wordt nu direct naar jouw adres verzonden via het e-mailprogramma van de bezoeker
-  window.location.href = `info@sevenlytransport.nl:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  // Replace this placeholder with Sevenly's real business email address before publishing.
+  const recipient = 'https://formspree.io/f/xvkkgnqn';
+  if (recipient.startsWith('https://formspree.io/f/xvkkgnqn')) {
+    const mailto = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body + '\n\nLet op: vul het e-mailadres van Sevenly in als ontvanger.')}`;
+    window.location.href = mailto;
+    document.getElementById('formStatus').textContent = 'De aanvraag is klaargezet in uw e-mailprogramma. Vul het e-mailadres van Sevenly als ontvanger in en verzend de e-mail.';
+  } else {
+    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
 });
+
 
